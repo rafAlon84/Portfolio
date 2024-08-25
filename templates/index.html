@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title> Rafa Alonso - Portfolio</title>
+<link rel="stylesheet" href="../static/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+    <header>
+        <div class="logo"> Portfolio profesional</div>
+        <nav>
+            <ul>
+                <li><a href='#contacto'>Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="hero">
+            <div class="hero-content">
+                <div class="left">
+                    <h1>DevOps Engineer</h1>
+                    <h1>Rafa Alonso</h1>
+                    <p>Bienvenid@,</p>
+                    <p class="indent">Mi nombre es Rafa y estoy buscando nuevas oportunidades en el área de DevOps.
+                        Aunque mi experiencia profesional directa es limitada, he invertido mucho tiempo
+                        en aprender y trabajar con una variedad de tecnologías que creo que pueden ser
+                        muy valiosas para cualquier equipo.</p>
+                    <p>Aquí está un resumen rápido de mi perfil:</p>
+                    <p><u>Certificaciones Clave</u>: AWS Solutions Architect Associate y Terraform Associate.
+                        Estas certificaciones me han proporcionado una sólida comprensión de la arquitectura
+                        en la nube y la gestión de infraestructura como código.
+                    <p><u>Conocimientos Técnicos</u>: He trabajado de manera intensiva con Linux, Docker, LXC, Ansible y
+                        Python en proyectos personales y educativos. Mi experiencia incluye:</p>
+
+                    <ul>
+                        <li>
+                            <p><u>Docker</u>: Creación y gestión de contenedores para aplicaciones, facilitando el
+                                despliegue y
+                                la
+                                integración continua.</p>
+                        </li>
+                        <li>
+                            <p><u>LXC</u>: Implementación y manejo de entornos de contenedores ligeros para pruebas y
+                                desarrollo.</p>
+                        </li>
+                        <li>
+                            <p><u>Linux</u>: Administración de sistemas, scripting y resolución de problemas en entornos
+                                Unix.
+                            </p>
+                        </li>
+                        <li>
+                            <p><u>Ansible</u>: Automatización de configuraciones y despliegues.</p>
+                        </li>
+                        <li>
+                            <p><u>Python</u>: Desarrollo de scripts para mejorar la automatización y la integración de
+                                sistemas.</p>
+                        </li>
+                    </ul>
+                    <p class="indent">Estoy entusiasmado por la oportunidad de aplicar estos conocimientos en un entorno
+                        profesional y seguir aprendiendo. Si conoces alguna oportunidad o deseas saber más sobre mi
+                        experiencia y habilidades, si tienes alguna duda, no dudes en contactarme.</p>
+
+                    <p>¡Gracias por tu tiempo y espero conectar pronto!</p>
+
+                    <p>Saludos</p>
+
+                </div>
+                <div class="right">
+                    <img src="../static/redes.jpg" width="800px" />
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="content">
+                <div class="row vert-pad">
+                    <div class="left padded">
+                        <h1> Formación continua e investigación</h1>
+                        <p> Me encuentro constantemente investigando nuevas tecnologías y formándome en nuevas áreas</p>
+                        <p class="hero2"><a href="#contacto" class="btn">Contáctame</a></p>
+                    </div>
+                    <div class="right2 padded">
+                        <h1> Formas de contacto</h1>
+                        <p>Puedes contactarme y tratar cualquier tema relacionado con DevOps y Cloud <a class="green"
+                                href='#contacto'>pinchando AQUÍ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center padded white-bg">
+            <div class="content padded">
+                <div class="padded">
+                    <h1>¿No estas convencido? Mira lo que he construido</h1>
+                </div>
+                <div class="row">
+                    <div class="card third">
+                        <h3>Ansible</h3>
+                        <p>Un Playbook de Ansible con roles, que realiza la post-instalación de un equipo Ubuntu </p>
+                        <a class="green" target="_blank" href="https://www.google.com">Link aquí</a>
+                    </div>
+                    <div class="card third">
+                        <h3>AWS/Terraform</h3>
+                        <p>Una aplicación de contactos donde buscar y filtrar los contactos de clientes y proveedores
+                        </p>
+                        <a class="green" href="#contacto">Link aquí</a>
+                    </div>
+                    <!--   <div class="card third">
+                        <h3>Lista de tareas</h3>
+                        <p>Es una aplicación para gestionar las diferentes tareas del día a día</p>
+                        <a class="green" href="#contacto">Link aquí</a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="center padded">
+            <div class="content">
+                <div class="row vert-pad">
+                    <div class="left padded">
+                        <h1>Ahora o nunca, trabajemos juntos :)</h1>
+                        <p>Daré lo mejor de mi para que tengamos una fructífera relación laboral a largo plazo</p>
+                    </div>
+                    <div id="contacto" class="right2 padded">
+                        <form class="contact-form" method="post" action="{{ url_for('mail') }}">
+                            <input name="name" placeholder="Nombre" required />
+                            <input name="_email" placeholder="Correo" required type='email' />
+                            <textarea placeholder="Mensaje" name="mensaje" required minlength="10"></textarea>
+                            <button class="btn full-width">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="center full-width">
+            <div class="row">
+                <h3>Contáctame a través de mis redes sociales o a través de mi correo electrónico</h3>
+            </div>
+        </div>
+
+        <div class="center full-width social-links">
+            <div class="row">
+                <a target="_blank" href="mailto:rafa.alon84@protonmail.com&subject=Oferta%20de%20empleo"><img
+                        class=" social" width=30 src="../static/instagram.jpg"></a>
+                <a target="_blank" href="https://www.linkedin.com/in/rafael-alonso-sousa-542b7b24b"><img class="social"
+                        width=30 src="../static/linkedin.jpg"></a>
+            </div>
+        </div>
+        <div class="made-width">
+            <div class="row">
+                <p> Hecho con ganas por Rafa Alonso</p>
+            </div>
+        </div>
+    </div>
+</body>
