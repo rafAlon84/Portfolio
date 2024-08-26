@@ -35,7 +35,6 @@
                         en la nube y la gestión de infraestructura como código.
                     <p><u>Conocimientos Técnicos</u>: He trabajado de manera intensiva con Linux, Docker, LXC, Ansible y
                         Python en proyectos personales y educativos. Mi experiencia incluye:</p>
-
                     <ul>
                         <li>
                             <p><u>Docker</u>: Creación y gestión de contenedores para aplicaciones, facilitando el
@@ -63,11 +62,8 @@
                     <p class="indent">Estoy entusiasmado por la oportunidad de aplicar estos conocimientos en un entorno
                         profesional y seguir aprendiendo. Si conoces alguna oportunidad o deseas saber más sobre mi
                         experiencia y habilidades, si tienes alguna duda, no dudes en contactarme.</p>
-
                     <p>¡Gracias por tu tiempo y espero conectar pronto!</p>
-
                     <p>Saludos</p>
-
                 </div>
                 <div class="right">
                     <img src="./static/redes.jpg" width="800px" />
@@ -103,8 +99,7 @@
                     </div>
                     <div class="card third">
                         <h3>AWS/Terraform</h3>
-                        <p>Una aplicación de contactos donde buscar y filtrar los contactos de clientes y proveedores
-                        </p>
+                        <p>En fase de desarrollo</p>
                         <a class="green" href="#contacto">Link aquí</a>
                     </div>
                     <!--   <div class="card third">
@@ -123,13 +118,41 @@
                         <p>Daré lo mejor de mi para que tengamos una fructífera relación laboral a largo plazo</p>
                     </div>
                     <div id="contacto" class="right2 padded">
-                        <form class="contact-form" method="post" action="{{ url_for('mail') }}">
+                        <form id="contactForm" class="contact-form">
                             <input name="name" placeholder="Nombre" required />
-                            <input name="_email" placeholder="Correo" required type='email' />
-                            <textarea placeholder="Mensaje" name="mensaje" required minlength="10"></textarea>
-                            <button class="btn full-width">Enviar</button>
+                            <input name="email" placeholder="Correo" required type='email' />
+                            <textarea placeholder="Mensaje" name="message" required minlength="10"></textarea>
+                            <button type="submit" class="btn full-width">Enviar</button>
                         </form>
                     </div>
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', function (event) {
+                            event.preventDefault(); // Prevenir el envío por defecto del formulario
+
+                            const formData = new FormData(this);
+                            const jsonData = {};
+                            formData.forEach((value, key) => {
+                                jsonData[key] = value;
+                            });
+
+                            fetch('https://mail.rafa-devops.win', { // URL del Worker
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                },
+                                body: JSON.stringify(jsonData),
+                            })
+                                .then(response => response.json())
+                                .then(result => {
+                                    console.log('Éxito:', result);
+                                    alert('Mensaje enviado con éxito!');
+                                })
+                                .catch(error => {
+                                    console.log('Error:', error);
+                                    alert('Ocurrió un error al enviar el mensaje.');
+                                });
+                        });
+                    </script>
                 </div>
             </div>
         </div>
