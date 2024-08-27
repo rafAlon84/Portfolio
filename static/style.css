@@ -120,6 +120,24 @@ nav ul li a {
         margin-top: 20px;
         text-align: center;
     }
+
+    .centered-text {
+        text-align: center;
+        /* Centra el texto en móviles */
+        padding-left: 20px;
+        /* Aplica la sangría en móviles */
+        padding-right: 20px;
+        /* Opcional, para agregar simetría */
+    }
+
+    .centered-text h3 {
+        margin: 0 auto;
+        /* Asegura que los títulos estén centrados */
+        max-width: 100%;
+        /* Controla el ancho del texto en móviles */
+        line-height: 1.5;
+        /* Mejora la legibilidad */
+    }
 }
 
 .hero h1 {
