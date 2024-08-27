@@ -1,10 +1,11 @@
+/* General Styles */
 html {
     font-family: 'Rufina', sans-serif;
 }
 
 body {
     background-color: #efefef;
-    margin: 0px;
+    margin: 0;
     color: #034d6c;
 }
 
@@ -20,6 +21,7 @@ a:hover {
     color: #9cc306;
 }
 
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
@@ -40,7 +42,6 @@ header .logo {
 
 nav ul {
     list-style-type: none;
-    font-size: 16px;
     padding: 0;
     margin: 0;
 }
@@ -53,79 +54,95 @@ nav ul li a {
     padding: 0px 15px;
 }
 
+/* Hero Section */
 .hero {
     background-color: #fff;
-    padding: 20px 10px;
-    /* Reduce padding en pantallas pequeñas */
+    padding: 20px;
     justify-content: center;
     position: relative;
     z-index: 1;
     display: flex;
-    flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    flex-direction: column;
+    /* Default to column layout for mobile */
 }
 
 .hero .hero-content {
     width: 100%;
     max-width: 1300px;
-    /* Mantén el ancho máximo para pantallas grandes */
-    margin: 0 auto;
-    /* Centra el contenedor */
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    /* Default to column layout for mobile */
+    align-items: center;
+    /* Center content horizontally */
+    text-align: center;
+    /* Center text */
 }
 
 .left,
 .right {
-    flex: 1;
-    min-width: 300px;
+    width: 100%;
+    /* Full width for mobile */
     padding: 10px;
     box-sizing: border-box;
 }
 
-.left {
-    /* Ajustes específicos para el contenido de la izquierda si es necesario */
+.right img {
+    max-width: 100%;
+    /* Responsive image */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
-.right {
-    position: relative;
-    /* Ajusta el margen superior para la imagen en vista de escritorio */
-    margin-top: 0;
+/* Media Queries */
+@media only screen and (min-width: 769px) {
+    .hero {
+        flex-direction: row;
+        /* Row layout for desktop */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .left,
+    .right {
+        width: 50%;
+        /* Half-width for text and image */
+        padding: 10px;
+    }
+
+    .right {
+        margin-left: 20px;
+        /* Space between text and image */
+        text-align: right;
+        /* Right-align image */
+    }
+
+    .left {
+        text-align: left;
+        /* Left-align text */
+    }
 }
 
 @media only screen and (max-width: 768px) {
     .hero .hero-content {
         flex-direction: column;
-        /* Cambia a columna en pantallas pequeñas */
-        align-items: center;
-        /* Centra el contenido */
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        /* Los contenedores ocupan todo el ancho */
-        margin: 0 auto;
-        /* Centra los contenedores */
-        padding: 10px;
-        /* Añade padding para el contenido */
+        /* Column layout for mobile */
     }
 
     .right {
-        margin-top: 40px;
-        /* Ajusta el margen superior de la imagen en pantallas pequeñas */
+        margin-top: 20px;
+        /* Space between text and image */
         text-align: center;
-        /* Centra la imagen */
+        /* Center image */
     }
 }
 
+/* Other Styles */
 .hero h1 {
     font-family: 'Rufina', sans-serif;
     font-size: 50px;
     font-weight: 700;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .hero p {
@@ -174,7 +191,6 @@ a.btn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* Permite que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .padded {
@@ -182,7 +198,7 @@ a.btn {
 }
 
 .vert-pad {
-    padding: 20px 0px;
+    padding: 20px 0;
 }
 
 .green {
@@ -211,6 +227,27 @@ a.btn {
 .third {
     width: 360px;
     margin: 20px;
+}
+
+.contact-form input {
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    width: calc(100% - 15px);
+}
+
+.contact-form textarea {
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    height: 100px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    resize: none;
+    width: calc(100% - 15px);
+    margin-bottom: 15px;
 }
 
 .full-width {
