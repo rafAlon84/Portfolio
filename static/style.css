@@ -51,7 +51,7 @@ html body nav ul li a {
     padding: 0px 15px;
 }
 
-.hero {
+/*.hero {
     background-color: #fff;
     padding: 20px 50px;
     justify-content: center;
@@ -65,6 +65,54 @@ html body nav ul li a {
     height: 1000px;
     display: flex;
     flex-direction: row;
+}*/
+
+.hero {
+    background-color: #fff;
+    padding: 20px 20px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero .hero-content {
+    width: 100%;
+    max-width: 1300px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left,
+.right {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.right {
+    position: relative;
+    margin-top: 120px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero .hero-content {
+        flex-direction: column;
+    }
+
+    .right {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
 }
 
 .hero h1 {
@@ -84,7 +132,7 @@ html body nav ul li a {
     margin-top: 30px;
 }
 
-.left {
+/*.left {
     width: 600px;
     align-self: center;
 }
@@ -96,7 +144,7 @@ html body nav ul li a {
     left: 40px;
     bottom: 150px;
 
-}
+}*/
 
 .right2 {
     width: 600px;
