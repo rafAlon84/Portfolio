@@ -70,7 +70,6 @@ nav ul li a {
     width: 100%;
     max-width: 1300px;
     display: flex;
-    flex-direction: column;
     /* Default to column layout for mobile */
     align-items: center;
     /* Center content horizontally */
@@ -94,7 +93,7 @@ nav ul li a {
 }
 
 /* Media Queries */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 480px) {
     .hero {
         flex-direction: row;
         /* Row layout for desktop */
