@@ -95,12 +95,12 @@
                     <div class="card third">
                         <h3>Ansible</h3>
                         <p>Un Playbook de Ansible con roles, que realiza la post-instalación de un equipo Ubuntu </p>
-                        <a class="green" target="_blank" href="https://www.google.com">Link aquí</a>
+                        <a class="green" target="_blank">Link aquí</a>
                     </div>
                     <div class="card third">
                         <h3>AWS/Terraform</h3>
                         <p>En fase de desarrollo</p>
-                        <a class="green" href="#contacto">Link aquí</a>
+                        <a class="green">Link aquí</a>
                     </div>
                     <!--   <div class="card third">
                         <h3>Lista de tareas</h3>
@@ -110,64 +110,30 @@
                 </div>
             </div>
         </div>
-        <div class="center padded">
-            <div class="content">
-                <div class="row vert-pad">
-                    <div class="left padded">
-                        <h1>Ahora o nunca, trabajemos juntos :)</h1>
-                        <p>Daré lo mejor de mi para que tengamos una fructífera relación laboral a largo plazo</p>
-                    </div>
-                    <div id="contacto" class="right2 padded">
-                        <form id="contactForm" class="contact-form">
-                            <input name="name" placeholder="Nombre" required />
-                            <input name="email" placeholder="Correo" required type='email' />
-                            <textarea placeholder="Mensaje" name="message" required minlength="10"></textarea>
-                            <button type="submit" class="btn full-width">Enviar</button>
-                        </form>
-                    </div>
-                    <script>
-                        document.getElementById('contactForm').addEventListener('submit', function (event) {
-                            event.preventDefault(); // Prevenir el envío por defecto del formulario
-
-                            const formData = new FormData(this);
-                            const jsonData = {};
-                            formData.forEach((value, key) => {
-                                jsonData[key] = value;
-                            });
-
-                            fetch('https://mail.rafa-alon84.workers.dev', { // URL del Worker
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                },
-                                body: JSON.stringify(jsonData),
-                            })
-                                .then(response => response.json())
-                                .then(result => {
-                                    console.log('Éxito:', result);
-                                    alert('Mensaje enviado con éxito!');
-                                })
-                                .catch(error => {
-                                    console.log('Error:', error);
-                                    alert('Ocurrió un error al enviar el mensaje.');
-                                });
-                        });
-                    </script>
-                </div>
-            </div>
-        </div>
     </section>
 
     <div class="footer">
         <div class="center full-width">
             <div class="row">
-                <h3>Contáctame a través de mis redes sociales o a través de mi correo electrónico</h3>
+                <h3>Ahora o nunca, trabajemos juntos :)</h3>
             </div>
         </div>
-
-        <div class="center full-width social-links">
+        <div class="center full-width">
             <div class="row">
-                <a target="_blank" href="#contacto"><img class=" social" width=30 src="./static/instagram.jpg"></a>
+                <h3>Daré lo mejor de mi para que tengamos una fructífera relación laboral a largo plazo</h3>
+            </div>
+        </div>
+        <div class="center full-width">
+            <div class="row">
+                <h3>Contáctame a través de mis redes sociales o a través de mi correo electrónico
+                    <u>rafa.alon84@protonmail.com</u>
+                </h3>
+            </div>
+        </div>
+        <div class="center full-width social-links">
+            <div class="row" id="contacto">
+                <a target="_blank" href="https://github.com/rafAlon84"><img class="social" width=30
+                        src="./static/github2.png"></a>
                 <a target="_blank" href="https://www.linkedin.com/in/rafael-alonso-sousa-542b7b24b"><img class="social"
                         width=30 src="./static/linkedin.jpg"></a>
             </div>
