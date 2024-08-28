@@ -136,7 +136,7 @@ nav ul li a {
         /* Aplica la sangría en móviles */
     }
 
-    .centered-text h5 {
+    .centered-text h4 {
         margin: 0 auto;
         /* Asegura que los títulos estén centrados */
         max-width: 90%;
