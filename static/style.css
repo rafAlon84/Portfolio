@@ -4,7 +4,7 @@ html {
 
 body {
     background-color: #efefef;
-    margin: 0;
+    margin-top: 50px;
     color: #034d6c;
 }
 
@@ -26,8 +26,12 @@ header {
     background-color: #fff;
     box-shadow: 3px 0px 5px #aaa;
     padding: 15px 30px;
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 header .logo {
@@ -128,19 +132,25 @@ nav ul li a {
     .centered-text {
         text-align: center;
         /* Centra el texto en móviles */
-        padding-left: 20px;
+        padding-top: 20px;
         /* Aplica la sangría en móviles */
-        padding-right: 20px;
-        /* Opcional, para agregar simetría */
     }
 
-    .centered-text h3 {
+    .centered-text h5 {
         margin: 0 auto;
         /* Asegura que los títulos estén centrados */
-        max-width: 100%;
+        max-width: 90%;
         /* Controla el ancho del texto en móviles */
         line-height: 1.5;
         /* Mejora la legibilidad */
+    }
+
+    .construction-container h1 {
+        font-size: 1.5em;
+    }
+
+    .construction-container p {
+        font-size: 0.9em;
     }
 }
 
@@ -195,7 +205,7 @@ a.btn {
 }
 
 .padded {
-    padding: 20px 30px;
+    padding: 0px 30px 20px;
 }
 
 .vert-pad {
@@ -231,6 +241,7 @@ a.btn {
     margin: 20px;
 }
 
+/*
 .contact-form input {
     font-family: 'Rubik', sans-serif;
     border: none;
@@ -250,14 +261,14 @@ a.btn {
     resize: none;
     width: calc(100% - 15px);
     margin-bottom: 15px;
-}
+}*/
 
 .full-width {
     width: 100%;
 }
 
 .footer {
-    padding: 80px 0 0;
+    padding: 50px 0 0;
     background-color: #333;
     color: #fff;
 }
@@ -288,4 +299,26 @@ a.btn {
 
 .indent {
     text-indent: 15px;
+}
+
+.construction-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.construction-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.construction-container h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.construction-container p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
 }
